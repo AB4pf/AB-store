@@ -9,24 +9,36 @@
 <head>
     <meta charset="UTF-8">
     <title>AB store</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-    <h1>AB store </h1>
-    <a href="connexion.php"><img class="connect" src="image\connexion.png" alt="logo"></a>  
-    <a href="panier.php"><img class="panier" src="image\panier.png" alt="logo"></a>
-    <a href="deco.php"><img src="image\dog.png" alt="logo"></a>
-<?php 
+<header class="mega_box_accueil">
+    <h1 class="box_tit_accueil"><a href="accueil.php">AB store</a></h1>
+    <div class="box_header_accueil">
+        <ul>
+            <li>
+                <a href="connexion.php">Log in</a>  
+            </li>
+            <li>
+                <a href="panier.php">Panier</a>  
+            </li>
+            <li>
+                <a href="deco.php">Déconexion</a>  
+            </li>
+            <?php 
+                if(!(isset($_SESSION["admin"]) && $_SESSION["admin"])){
+                    echo '<li><a href="insertion.php">Insertion</a></li>
+                    <li><a href="update.php">Mise à jour</a></li>';
+                }
+            ?>
+        </ul>
 
-    if(!(isset($_SESSION["admin"]) && $_SESSION["admin"])){
-        echo '<a href="insertion.php"><img class="insert" src="image\logo insertion.png" alt="logo"></a>
-    <a href="update.php"><img class="update" src="image\logo update.png" alt="logo"></a>';
-    }
-?> 
+    </div>
+    
+ 
 </header>
 <hr>
-<section class='page_accueil'>
+<section class='mega_box'>
     <div class='page_article'>
 
         <?php

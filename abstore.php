@@ -7,20 +7,21 @@
 <head>
     <meta charset="UTF-8">
     <title>AB store</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header>
-    <h1>AB store </h1>
-</header>
-<hr>
-<section>
-    <img class="backimg" src="image\deadknights.png" alt="logo">
-    <div class="txt">
-        <p>"Le monde est un mensonge"</p>
-        <p><a href="accueil.php">SHOP</a></p>
+    <div class="box_header">
+        <h1>AB store </h1>
     </div>
-    
+</header>
+<section class="mega_box">
+    <div class="box_abstore">
+        <a href="accueil.php"><img class="backimg" src="image\deadknights.png" alt="logo"></a>
+        <div class="txt">
+            <p><a href="accueil.php">"Le monde est un mensonge"</a></p>
+        </div>
+    </div>
 </section>
 <hr>
 <footer>
